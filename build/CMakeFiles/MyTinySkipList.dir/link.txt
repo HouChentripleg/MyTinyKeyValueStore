@@ -1,0 +1,1 @@
+/usr/bin/c++   -pthread   CMakeFiles/MyTinySkipList.dir/main.cpp.o  -o MyTinySkipList libTinySkipListLib.a 
