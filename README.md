@@ -8,7 +8,8 @@
 ![节点](./images/skiplist.png)
 - RBtree采用左/右旋动态更新数据，跳表也需要动态维护索引，借助随机函数更新索引
 ![节点](./images/rbtree.png)
-```
+
+```c++
 /*
     随机生成[1, kMaxLevel]间的数，1的概率1/2，2的概率1/4，3的概率1/8...
     返回1时不建索引，返回2建一级索引，返回3建二级索引...
@@ -29,20 +30,36 @@
 ```
 
 # 对外接口
-1. searchElement()  查询数据
-2. insertElement()  插入数据
-3. deleteElement()  删除数据
-4. updateElement()  更新数据
-5. displaySkiplist()    展示数据
-6. clearSkiplist()  清除数据
-7. dumpFile()   数据落盘
-8. loadFile()   加载数据
-9. size()   获取数据规模
+- searchElement()  查询数据
+- insertElement()  插入数据
+- deleteElement()  删除数据
+- updateElement()  更新数据
+- displaySkiplist()    展示数据
+- clearSkiplist()  清除数据
+- dumpFile()   数据落盘
+- loadFile()   加载数据
+- size()   获取数据规模
 
-# key-value store压力测试
+# key-value store using google/benchmark
 跳表高度：18
-![节点](./images/performance.png)
+```
+--------------------------------------------------------------------
+Benchmark                          Time             CPU   Iterations
+--------------------------------------------------------------------
+benchmark_insert/18/10000 1124001039 ns    412418022 ns            2
+benchmark_insert/18/100000 1.2009e+10 ns   4562885306 ns            1
+benchmark_insert/18/500000 7.1313e+10 ns   2.6616e+10 ns            1
+benchmark_search/18/10000  167249872 ns    154498136 ns            4
+benchmark_search/18/100000 2196137493 ns   2075338956 ns            1
+benchmark_search/18/500000 1.1502e+10 ns   1.0762e+10 ns            1
+benchmark_delete/18/10000   79145271 ns     74339137 ns            9
+benchmark_delete/18/100000 1638887098 ns   1454278052 ns            1
+benchmark_delete/18/500000 8235816014 ns   7386500477 ns            1
+benchmark_update/18/10000  312082126 ns    310157187 ns            2
+benchmark_update/18/100000 3304066567 ns   3260226285 ns            1
+benchmark_update/18/500000 1.7145e+10 ns   1.7079e+10 ns            1
+```
 
 # 待优化
-- 将随机读写改为顺序读写，增强写操作的性能，需要结合LSM-Tree
-- 压力测试自动化
+- [ ] 将随机读写改为顺序读写，增强写操作的性能，需要结合LSM-Tree
+- [x] 压力测试自动化

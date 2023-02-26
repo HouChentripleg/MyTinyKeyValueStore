@@ -3,7 +3,7 @@
 #include <pthread.h>
 #include "../include/skiplist.hpp"
 
-#define THREADS_NUM 1
+#define THREADS_NUM 10
 #define TEST_CNT 100000
 SkipList<std::string, std::string> skiplist(18);
 

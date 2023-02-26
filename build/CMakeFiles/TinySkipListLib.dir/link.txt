@@ -1,2 +1,2 @@
-/usr/bin/ar qc libTinySkipListLib.a  
+/usr/bin/ar qc libTinySkipListLib.a 
 /usr/bin/ranlib libTinySkipListLib.a

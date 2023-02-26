@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "libTinySkipListLib.pdb"
   "libTinySkipListLib.a"
+  "libTinySkipListLib.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

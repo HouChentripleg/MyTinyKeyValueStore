@@ -1,4 +1,4 @@
-/home/linux/AKprojects/MyTinySkipList/build/CMakeFiles/rebuild_cache.dir
-/home/linux/AKprojects/MyTinySkipList/build/CMakeFiles/MyTinySkipList.dir
-/home/linux/AKprojects/MyTinySkipList/build/CMakeFiles/edit_cache.dir
-/home/linux/AKprojects/MyTinySkipList/build/CMakeFiles/TinySkipListLib.dir
+/home/tripleg/myCodes/MyTinyKeyValueStore/build/CMakeFiles/TinySkipListLib.dir
+/home/tripleg/myCodes/MyTinyKeyValueStore/build/CMakeFiles/MyTinySkipList.dir
+/home/tripleg/myCodes/MyTinyKeyValueStore/build/CMakeFiles/edit_cache.dir
+/home/tripleg/myCodes/MyTinyKeyValueStore/build/CMakeFiles/rebuild_cache.dir

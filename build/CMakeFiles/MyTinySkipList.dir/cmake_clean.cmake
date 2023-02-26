@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyTinySkipList.dir/main.cpp.o"
-  "MyTinySkipList.pdb"
+  "CMakeFiles/MyTinySkipList.dir/main.cpp.o.d"
   "MyTinySkipList"
+  "MyTinySkipList.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

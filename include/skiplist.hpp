@@ -45,8 +45,8 @@ public:
 
 template<typename K, typename V>
 SkipList<K, V>::SkipList(int maxLevel) : maxLevel_(maxLevel), curLevel_(0), elementCnt_(0) {
-    K k;
-    V v;
+    K k = K();
+    V v = V();
     header_ = newNode(k, v, maxLevel);
 }
 
@@ -139,7 +139,7 @@ int SkipList<K, V>::insertElement(K key, V value) {
             insertedNode->forward_[i] =update[i]->forward_[i];
             update[i]->forward_[i] = insertedNode;
         }
-        std::cout << "insert successfully! key: " << key << ", value: " << value << std::endl;
+        // std::cout << "insert successfully! key: " << key << ", value: " << value << std::endl;
         ++elementCnt_;
     }
     return 0;

@@ -4,6 +4,7 @@ project(MYTINYSKIPLIST LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS -pthread)
+set(CMAKE_CXX_FLAGS -g)
 
 set(INCLUDE ./include/listnode.hpp
             ./include/skiplist.hpp)
